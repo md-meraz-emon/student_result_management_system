@@ -1,0 +1,340 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;
+}
+
+body{
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+.main{
+flex:1;
+background-image:url("background image.jpg");
+background-size:cover;
+background-position:center;
+background-attachment: fixed;
+}
+
+/* Navbar */
+nav{
+height:100px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 50px;
+
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+/* Menu */
+nav .menu{
+display:flex;
+list-style:none;
+gap:40px;
+}
+
+nav .menu li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+position:relative;
+transition:0.3s;
+}
+
+nav .menu li a:hover{
+color:#ffd700;
+}
+
+nav .menu li a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:#ffd700;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav .menu li a:hover::after{
+width:100%;
+}
+
+/* Logo */
+.logo{
+filter: drop-shadow(0px 3px 8px rgba(0,0,0,3));
+filter:blur(0.2px); 
+height:10vw;
+width:auto;
+}
+
+/* Hamburger */
+.hamburger{
+display:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+transform:translateX(100%);
+transition:0.4s;
+}
+
+.mobile-menu ul{
+list-style:none;
+text-align:center;
+}
+
+.mobile-menu ul li{
+margin:20px 0;
+}
+
+.mobile-menu ul li a{
+text-decoration:none;
+color:white;
+font-size:24px;
+}
+
+/* Close */
+.close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:35px;
+color:white;
+cursor:pointer;
+}
+
+/* Footer */
+footer{
+background:rgba(0,0,0,0.7);
+color:white;
+padding:40px 0 10px 0;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-around;
+text-align:center;
+}
+
+.footer-section h3{
+margin-bottom:15px;
+}
+
+.footer-section a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.footer-section a:hover{
+color:#ffd700;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+nav .menu{
+display:none;
+}
+
+.hamburger{
+display:block;
+}
+nav{
+    display: flex;
+    padding-left: 0px;
+}
+.logo{
+    height:140px;
+    position: relative;
+    margin-right:-100px ;
+}
+
+.footer-container{
+flex-direction:column;
+gap:30px;
+}
+
+}
+
+.active{
+color:#ffd700 !important;
+}
+
+.auth-section{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:80px 0;
+}
+
+.auth-box{
+width:280px;
+padding:40px;
+border-radius:15px;
+
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+
+display:flex;
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.auth-box h2{
+color:white;
+}
+
+.auth-box input{
+padding:12px;
+border:none;
+border-radius:8px;
+outline:none;
+}
+
+.auth-box button{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#ffd700;
+cursor:pointer;
+font-size:16px;
+}
+
+.error{
+color:red;
+font-size:14px;
+}
+
+.hidden{
+display:none;
+}
+
+.active{
+color:#ffd700 !important;
+}
+.auth-box p{
+cursor:pointer;
+}
+
+*{
+-webkit-tap-highlight-color: transparent;
+}
+
+.switch-word{
+color:#ffd700;
+font-weight:bold;
+cursor:pointer;
+}
+
+.switch-word1{
+color:#ffd700;
+font-weight:bold;
+cursor:pointer;
+}
+
+form{
+    margin:0;
+    padding:0;
+}
+
+.auth-box form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.auth-box{
+    box-sizing:border-box;
+}
+
+/* ===== Message Box ===== */
+.login-error-msg{
+/* background:#dc3545; */
+color:rgb(255, 0, 0);
+/* padding:12px; */
+/* border-radius:8px; */
+text-align:center;
+margin-bottom:15px;
+font-weight:bold;
+animation:fadeMsg 0.4s ease;
+}
+
+@keyframes fadeMsg{
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.signup-error-msg{
+ animation:fadeMsg 0.4s ease;   
+font-weight:bold;
+/* background:#dc3545; */
+color:rgb(255, 0, 0);
+padding:0px;
+/* border-radius:8px; */
+margin-bottom:10px;
+text-align:center;
+}
+
+@keyframes fadeMsg{
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.message{
+position:fixed;
+top:90px;
+left:50%;
+transform:translateX(-50%);
+padding:12px 30px;
+border-radius:8px;
+color:white;
+z-index:9999;
+}
+
+.success{
+background:#28a745;
+}
