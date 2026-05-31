@@ -1,4 +1,16 @@
 🚀 Features
+# Student Result Management System
+
+## 🚀 Live Demo
+👉 http://merazstudentmng.rf.gd
+
+## 📌 Features
+- Student Login
+- Result Submit
+- Result Check
+- Admin Panel
+
+  
 👨‍🎓 Student Features
 Secure student authentication system
 Login required to access protected pages
